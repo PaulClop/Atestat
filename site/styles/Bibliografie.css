@@ -1,0 +1,179 @@
+@font-face {
+  src: url(../fonts/Gothvetica Caps.ttf);
+  font-family: GothCap;
+}
+
+
+@font-face {
+  src: url(../fonts/Anton-Regular.ttf);
+  font-family: antone;
+}
+
+#Bibliografie::after{
+  content: "";
+  background: red;
+  height: 3px;
+  width: 1em;
+  display: block;
+  transition: 0.3s;
+}
+
+#phonemenu::before{
+  content: "";
+  background: red;
+  height: 1em;
+  width: 3px;
+  display: inline-block;
+  margin-right: 1%;
+  transition: 0.3s;
+}
+
+.content{
+  width: 100vw;
+  padding-top: 7vh;
+}
+
+.slide {
+  width: 100vw;
+  height: auto;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.slideul {
+  position: relative;
+  max-width: 48vw;
+  margin: 0 auto;
+  padding-left: 2vw;
+}
+
+.imagini {
+  display: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 0.5rem;
+  
+}
+
+.imagini img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+  scroll-padding-top: 10px;
+  animation: 24s automatic infinite;
+}
+
+
+@keyframes automatic {
+
+  0%{
+    transform: translateX(0);
+  }
+  6.25%{
+    transform: translateX(0);
+  }
+  14.5%{
+    transform: translateX(-102%);
+  }
+  22.75%{
+    transform: translateX(-100.1%);
+  }
+  30%{
+    transform: translateX(-202%);
+  }
+  38.25%{
+    transform: translateX(-200.1%);
+  }
+  46.5%{
+    transform: translateX(-302%);
+  }
+  54.75%{
+    transform: translateX(-300.1%);
+  }
+  62%{
+    transform: translateX(-402%);
+  }
+  70.25%{
+    transform: translateX(-400.1%);
+  }
+  78.5%{
+    transform: translateX(-502%);
+  }
+  86.75%{
+    transform: translateX(-500.1%);
+  }
+
+  99.5%{
+    transform: translateX(0);
+  }
+  
+}
+
+.nav {
+	display: flex;
+	column-gap: 1vw;
+	position: absolute;
+	bottom: 1.25vh;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+  align-items: center;
+}
+
+.nav a {
+	width: 1vw;
+	height: 1vw;
+	border-radius: 50%;
+	background-color: #00c4ff;
+	opacity: 0.75;
+	transition: ease 250ms;
+}
+
+.nav a:hover {
+	opacity: 1;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+
+.black{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: auto;
+  width: 70vw;
+  background: rgb(50,49,49);
+  margin: 0 auto;
+  padding: 2vh;
+  border-radius: 0.5rem;
+  margin-bottom: 2vh;
+  flex-direction: column;
+  row-gap: 3vh;
+}
+
+.blacktxt{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  max-width: 100%;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  font-size:clamp(1.5em, 1.4vw, 3em);
+  color: white;
+  font-family: GothCap;
+  text-decoration: none;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+@media screen and (max-width: 900px){
+  .black{
+    width: 80vw;
+  }
+
+  .slideul {
+    max-width: 90vw;
+  }
+}

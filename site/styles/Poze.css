@@ -1,0 +1,173 @@
+@font-face {
+  src: url(../fonts/Gothvetica Caps.ttf);
+  font-family: GothCap;
+}
+
+
+@font-face {
+  src: url(../fonts/Anton-Regular.ttf);
+  font-family: antone;
+}
+
+#Poze::after{
+  content: "";
+  background: red;
+  height: 3px;
+  width: 1em;
+  display: block;
+  transition: 0.3s;
+}
+
+#phonemenu::before{
+  content: "";
+  background: red;
+  height: 1em;
+  width: 3px;
+  display: inline-block;
+  margin-right: 1%;
+  transition: 0.3s;
+}
+
+.content{
+  padding-top: 8vh;
+  margin-bottom: 4vh;
+}
+
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hovering{
+  display: flex;
+  width: 32.5%;
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.hovering img{
+  width: 100%;
+  border-radius: 5px;
+}
+
+.hovering .para {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left:20%;
+  top:80%;
+  opacity: 0;
+  transform: translate(-13%,-50%);
+  transition: 0.8s;
+  color: white;
+  font-family: GothCap;
+  align-items: center;
+}
+
+.hovering .para h1{
+  text-align: center;
+  transform: translate(0,-70%);
+}
+
+.para p{
+  text-align: center;
+  font-size:clamp(1.1em, 1.2vw, 3em);
+}
+
+.hovering::before{
+  content: "";
+  opacity: 0;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.para h1{
+  font-size:clamp(2em, 2.5vw, 5em);
+  margin-bottom: 10px;
+}
+
+.hovering:hover::before{
+  opacity: 1;
+}
+
+.hovering:hover .para{
+  top:50%;
+    opacity: 1;
+}
+
+@keyframes animatiebefore{
+  100%{
+    opacity: 1;
+  }
+
+}
+
+@keyframes animatiepara{
+  100%{
+    top:50%;
+    opacity: 1;
+  }
+
+}
+
+.incerc{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+
+.incerc text{
+  width: 100%;
+}
+
+.whitezone{
+  display: block;
+  margin: auto;
+}
+
+.whitezone iframe{
+  width: 80vw;
+  aspect-ratio: 16/9;
+}
+
+@media screen and (max-width: 1400px){
+  .hovering{
+    width: 48.75%;
+  }
+
+  .para h1{
+    font-size:clamp(2em, 3vw, 5em);
+  }
+
+  .para p{
+    font-size:clamp(1.1em, 1.7vw, 3em);
+  }
+}
+
+@media screen and (max-width: 900px){
+  .hovering{
+    width: 100%;
+  }
+
+  .para h1{
+    font-size:clamp(2em, 5vw, 5em);
+  }
+
+  .para p{
+    font-size:clamp(1.1em, 3.7vw, 3em);
+  }
+
+  .whitezone iframe{
+    width: 90vw;
+    aspect-ratio: 1/1;
+  }
+}

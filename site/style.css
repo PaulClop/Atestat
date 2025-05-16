@@ -1,0 +1,159 @@
+@font-face {
+  src: url(fonts/Gothvetica Caps.ttf);
+  font-family: GothCap;
+}
+
+
+@font-face {
+  src: url(fonts/Anton-Regular.ttf);
+  font-family: antone;
+}
+
+
+body{
+background: rgb(248,246,247);
+overflow-x: hidden;
+}
+
+.header{
+  background: rgb(50,49,49,0.9);
+  position: fixed;
+  width: 100%;
+  height: 7vh;
+  z-index: 10;
+  align-content: center;
+  backdrop-filter:blur(4px);
+}
+.headerdiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.headerli{
+  display: flex;
+  font-family: GothCap;
+  font-size: 1.7em;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1em;
+}
+
+.headerli li{
+  list-style: none;
+}
+
+.headerli a{
+  color: White;
+  text-decoration: none;
+}
+
+.logo{
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  font-size: 3em;
+  color: white;
+  font-family: antone;
+  text-decoration: none;
+}
+
+.lines3{
+  display: none;
+  flex-direction: column;
+
+}
+
+.line{
+  width: 30px;
+  height: 5px;
+  margin: 2.5px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.menu2{
+  display: none;
+  position: fixed;
+  top: 7%;
+  height: 93%;
+  width: 100%;
+  z-index: 300;
+  background-color: rgba(0,0,0,.8);
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu2 ul{
+  display: flex;
+  font-family: GothCap;
+  font-size: 2em;
+  flex-direction:column;
+  align-items: center;
+  justify-content:space-around;
+  width: 100%;
+}
+
+.menu2 li{
+  list-style: none;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.menu2 a{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+
+#menu-toggle{
+  display: none;
+}
+
+.headerli a::after{
+  content: "";
+  background: red;
+  height: 3px;
+  width: 0;
+  display: block;
+  transition: 0.3s;
+}
+
+.headerli a:hover::after{
+  width: 1em;
+}
+
+
+@media screen and (max-width: 900px) {
+  .headerli {
+    display: none;
+  }
+
+  .menu2{
+    display: flex;
+    height: 0;
+  }
+  
+  .lines3{
+    display: flex;
+    position: absolute;
+    right: 5%;
+  }
+
+  #menu-toggle:checked ~ .menu2{
+    height: 93%;
+  }
+
+  .menu2 li:hover{
+    background-color: rgba(0,0,0,0.5);
+  }
+}

@@ -1,0 +1,118 @@
+@font-face {
+  font-family: GothCap;
+  src: url(../fonts/Gothvetica Caps.ttf);
+}
+
+
+@font-face {
+  font-family: antone;
+  src: url(../fonts/Anton-Regular.ttf);
+}
+
+
+#Acasa::after{
+  content: "";
+  background: red;
+  height: 3px;
+  width: 1em;
+  display: block;
+  transition: 0.3s;
+}
+
+.content{
+ width: 100%;
+ height: 100%;
+}
+
+.banner{
+  background-image: url(../photos/japan-1460334.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 99vh;
+}
+
+.black{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 30vh;
+  width: 100%;
+  background: rgb(50,49,49);
+}
+
+.blacktxt{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  font-size:clamp(1.4em, 1.4vw, 3em);
+  color: white;
+  font-family: GothCap;
+}
+
+.white{
+  display: flex;
+  height: 50vh;
+  width: 100%;
+  background: rgb(248,246,247);
+
+}
+
+.whitetxt{
+  display: flex;
+  width: 50%;
+  align-self: center;
+  text-align: center;
+  font-size:clamp(1.4em, 1.4vw, 3em);
+  color: black;
+  font-family: GothCap;
+  z-index: 3;
+
+}
+
+.whitetxt p{
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
+
+.whiteImg{
+  display: flex;
+  background-image: url(../photos/map-3476649.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  z-index: 3;
+}
+
+#img2{
+  background-image: url(../photos/japan-4540612_1920.jpg);
+}
+
+#white1{
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 900px) {
+  .white{
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .whiteImg{
+    width: 100%;
+    height: 50vh;
+    margin: 1vh;
+  }
+
+  .whitetxt{
+    width: 100%;
+    height: 30vh;
+    z-index: 0;
+  }
+
+  .whitetxt p{
+    align-self: center;
+  }
+}

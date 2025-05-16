@@ -1,0 +1,206 @@
+@font-face {
+  src: url(../fonts/Gothvetica Caps.ttf);
+  font-family: GothCap;
+}
+
+
+@font-face {
+  src: url(../fonts/Anton-Regular.ttf);
+  font-family: antone;
+}
+
+body{
+  padding-bottom: 3vh;
+}
+
+#Economie::after{
+  content: "";
+  background: red;
+  height: 3px;
+  width: 1em;
+  display: block;
+  transition: 0.3s;
+}
+
+#phonemenu::before{
+  content: "";
+  background: red;
+  height: 1em;
+  width: 3px;
+  display: inline-block;
+  margin-right: 1%;
+  transition: 0.3s;
+}
+
+.content{
+  
+  padding-top: 7vh;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(10,10%);
+  grid-row-gap: 5vh;
+}
+
+.black{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 30vh;
+  width: 100%;
+  background: rgb(50,49,49);
+  
+}
+
+.blacktxt{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  font-size:clamp(1.4em, 1.4vw, 3em);
+  color: white;
+  font-family: GothCap;
+}
+
+.whitetxt{
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  font-size:clamp(0.5em, 1.4vw, 3em);
+  color: black;
+  font-family: GothCap;
+  z-index: 3;
+  
+}
+
+.whitetxt.r {
+  grid-column-start: 7;
+  grid-column-end: 9;
+}
+
+.whitetxt.l {
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.whitetxt p{
+  padding-left: 3vh;
+  padding-right: 3vh;
+}
+
+.whitetxt p::after{
+  content: "";
+  width: 60%;
+  height: 0.2vw;
+  background: rgb(50,49,49);
+  display: flex;
+  position: relative;
+  left: 50%;
+  top: 5px;
+  transform: translate(-50%);
+}
+
+.poza{
+  display: flex;
+}
+
+.poza.r {
+  grid-column-start: 2;
+  grid-column-end: 7;
+}
+
+.poza.l {
+  grid-column-start: 5;
+  grid-column-end: 10;
+}
+
+.poza img{
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.fasie{
+  display: flex;
+  flex-direction: column;
+  background: rgb(50,49,49);
+  align-items: center;
+  justify-content: center;
+}
+
+.fasie.r {
+  grid-column-start: 9;
+  grid-column-end: 10;
+}
+
+.fasie.l {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.fasie h1{
+  color: white;
+  font-family: GothCap;
+  font-size: clamp(1.2em , 2vw , 9em);
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+@media screen and (max-width: 1100px){
+  
+  .fasie h1{
+    font-size: clamp(1.2em , 3.5vw , 1.4rem);
+  }
+
+  .grid{
+    grid-row-gap: 0;
+  }
+
+  .whitetxt{
+    font-size: clamp(1.2em , 4vw , 1.6rem);
+    padding: 2.5vh 0;
+    justify-content: center;
+  }
+
+  .whitetxt p{
+    margin-bottom: 2.5vh;
+  }
+
+  .whitetxt.r{
+    grid-column-start: 2;
+    grid-column-end: 10;
+    
+  }
+
+  .whitetxt.l{
+    grid-column-start: 2;
+    grid-column-end: 10;
+  }
+
+  .poza img{
+    border-radius: 0;
+  }
+
+  .poza.r{
+    grid-column-start: 1;
+    grid-column-end: 11;
+  }
+
+  .poza.l{
+    grid-column-start: 1;
+    grid-column-end: 11;
+  }
+
+  .fasie.r{
+    grid-column-start: 10;
+    grid-column-end: 11;
+  }
+
+  .fasie.l{
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+}

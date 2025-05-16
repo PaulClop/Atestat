@@ -1,0 +1,388 @@
+@font-face {
+  src: url(../fonts/Gothvetica Caps.ttf);
+  font-family: GothCap;
+}
+
+
+@font-face {
+  src: url(../fonts/Anton-Regular.ttf);
+  font-family: antone;
+}
+
+#Sport::after{
+  content: "";
+  background: red;
+  height: 3px;
+  width: 1em;
+  display: block;
+  transition: 0.3s;
+}
+
+#phonemenu::before{
+  content: "";
+  background: red;
+  height: 1em;
+  width: 3px;
+  display: inline-block;
+  margin-right: 1%;
+  transition: 0.3s;
+}
+
+.content{
+  width: 100vw;
+  padding-top: 7vh;
+}
+
+.whitesp{
+  display: inline-flex;
+  width: 100vw;
+  background: white;
+  padding-bottom: 8vh;
+}
+
+.whitesp img{
+  width: 60vw;
+  padding-bottom: 2vh;
+}
+
+.whitesp p{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  font-size:clamp(1.4em, 1.4vw, 3em);
+  color: black;
+  font-family: GothCap;
+}
+
+.whitesp h1{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  margin-bottom: 2vh;
+  font-size:clamp(1.4em, 2.4vw, 3em);
+  color: black;
+  font-family: GothCap;
+}
+
+.whitetxtsp{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 2vh;
+  padding-top: 2vh;
+  width: 50vw;
+}
+
+.grid{
+  background-color: white;
+  width: ;
+  display: flex;
+  padding: 0 2vw;
+  height: 90vh;
+  margin-bottom: 2vh;
+  padding-top: 2vh;
+  width: 96vw;
+}
+
+.grid input{
+  display: none;
+}
+
+.labels{
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.grid label{
+  width: 18vw;
+  padding: 1.05vh 0 1.05vh 1.05vw;
+  
+  color: #a2a2a2;
+  transition: 0.3 ease;
+  font-size:clamp(1.4em, 3vw, 3em);
+}
+
+#label1,
+#label2,
+#label3{
+  border-left: .35vw solid #dcdcdc;
+}
+
+#label4,#label5,#label6{
+  border-right: .35vw solid #dcdcdc;
+}
+
+
+.grid label:hover{
+  color: black;
+}
+
+#tab1:checked ~ .labels #label1{
+  color: black;
+  border-left: 0.35vw solid #00c4ff;
+}
+
+#tab2:checked ~ .labels #label2{
+  color: black;
+  border-left: .35vw solid #00c4ff;
+}
+
+#tab3:checked ~ .labels #label3{
+  color: black;
+  border-left: .35vw solid #00c4ff;
+}
+
+.grid label:hover{
+  color: black;
+}
+
+#tab4:checked ~ .labels #label4{
+  color: black;
+  border-right: 0.35vw solid #00c4ff;
+}
+
+#tab5:checked ~ .labels #label5{
+  color: black;
+  border-right: .35vw solid #00c4ff;
+}
+
+#tab6:checked ~ .labels #label6{
+  color: black;
+  border-right: .35vw solid #00c4ff;
+}
+
+.tabcontent{  
+  width: 76.95vw;
+  overflow: hidden;
+  font-size:clamp(1.4em, 1.4vw, 3em);
+  font-family: GothCap;
+}
+
+.tabc{
+  overflow: hidden;
+  display: none;
+  max-height: 0;
+}
+
+#tab1:checked ~ .tabcontent #tabc1,
+#tab2:checked ~ .tabcontent #tabc2,
+#tab3:checked ~ .tabcontent #tabc3{
+  display: flex;
+  animation: fade-in 1s forwards;
+}
+
+#tab4:checked ~ .tabcontent #tabc4,
+#tab5:checked ~ .tabcontent #tabc5,
+#tab6:checked ~ .tabcontent #tabc6{
+  display: flex;
+  animation: fade-in 1s forwards;
+}
+
+.black{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 30vh;
+  width: 100%;
+  background: rgb(50,49,49);
+}
+
+.blacktxt{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  font-size:clamp(1.4em, 1.4vw, 3em);
+  color: white;
+  font-family: GothCap;
+}
+
+.white{
+  display: inline-flex;
+  width: 100vw;
+  background: white;
+  padding-bottom: 3vh;
+}
+
+.white img{
+  width: 60vw;
+  padding-bottom: 2vh;
+}
+
+.white p{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  font-size:clamp(1.4em, 1.4vw, 3em);
+  color: black;
+  font-family: GothCap;
+}
+
+.white h1{
+  display: flex;
+  align-self: center;
+  text-align: center;
+  margin-left: 3vh;
+  margin-right: 3vh;
+  margin-bottom: 2vh;
+  font-size:clamp(1.4em, 2.4vw, 3em);
+  color: black;
+  font-family: GothCap;
+}
+
+.whitetxt{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding-bottom: 2vh;
+}
+
+.tabc{
+  height: 100%;
+}
+
+.tabc img{
+  width: 31vw;
+  object-fit: cover;
+  height: 100%;
+}
+
+.tabc1p{
+  display: flex;
+  width: 45.95vw;
+  
+  align-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2vw;
+  font-size:clamp(0.9em, 1.5vw, 3em);
+}
+
+#tabc2,
+#tabc5,
+.grid.r{
+  flex-direction: row-reverse;
+}
+
+
+
+
+@keyframes fade-in {
+  0% {
+    max-height: 0;
+    opacity: 0;
+  }
+  100% {
+    max-height: 100vh;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 900px){
+
+  .white{
+    display: block;
+  }
+
+  .white h1{
+    font-size: clamp(2em , 5.5vw , 2.5em);
+  }
+
+  .white img{
+    width: 100vw;
+    padding-bottom: 0;
+  }
+
+  .labels{
+    width: 100vw;
+    flex-direction: row;
+    padding-bottom: 2vh;
+    
+  }
+
+  .grid label{
+    display: flex;
+  }
+
+  .grid{
+    flex-wrap: wrap;
+    
+  }
+
+  .grid label{
+    text-align: center;
+    font-size: clamp(2em , 3.5vw , 2.5em);
+    flex-grow: 1;
+    border-top: .40vh solid #dcdcdc;
+  }
+
+  #label1,#label2,#label3{
+    border-left: 0;
+  }
+
+  #label4,#label5,#label6{
+    border-right: 0;
+  }
+
+  #tab1:checked ~ .labels #label1{
+    color: black;
+    border-left: 0;
+    border-top: 0.40vh solid #00c4ff;
+  }
+  
+  #tab2:checked ~ .labels #label2{
+    color: black;
+    border-left: 0;
+    border-top: .40vh solid #00c4ff;
+  }
+  
+  #tab3:checked ~ .labels #label3{
+    color: black;
+    border-left: 0;
+    border-top: .40vh solid #00c4ff;
+  }
+
+  #tab4:checked ~ .labels #label4{
+    color: black;
+    border-right: 0;
+    border-top: 0.40vh solid #00c4ff;
+  }
+  
+  #tab5:checked ~ .labels #label5{
+    color: black;
+    border-right: 0;
+    border-top: .40vh solid #00c4ff;
+  }
+  
+  #tab6:checked ~ .labels #label6{
+    color: black;
+    border-right: 0;
+    border-top: .40vh solid #00c4ff;
+  }
+
+  .tabcontent{
+    height: 80vh;
+    width: 100vw;
+
+  }
+
+  .labels label{
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tabc img{
+    flex-grow: 1;
+  }
+
+}
